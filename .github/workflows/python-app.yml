@@ -23,7 +23,11 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        make install
+        make init_db
+
+    - name: Databese Migrations
+      run: |
+        make init_db
         
     - name: Run tests
       run: |

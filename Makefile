@@ -14,11 +14,12 @@ clean:
 install:
 	pip install -e .['dev']
 
+init_db:
+	FLASK_APP=chico_delivery/app.py flask create-db
+	FLASK_APP=chico_delivery/app.py flask db upgrade
+
 test:
 	pytest tests/ -v --cov=chico_delivery
 
-flask:
-	export FLASK_APP=chico_delivery/app.py
-	export FLASK_ENV=development
-	flask run
+
 
