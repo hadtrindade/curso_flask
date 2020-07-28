@@ -19,7 +19,7 @@ init_db:
 	FLASK_APP=chico_delivery/app.py flask db upgrade
 
 test:
-	pytest tests/ -v --cov=chico_delivery
+	FLASK_ENV=test pytest tests/ -v --cov=chico_delivery
 
 
 
