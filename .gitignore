@@ -1,3 +1,19 @@
 bizu.py
 .venv
 chico_delivery.egg-info
+
+exemplo_config/
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+bizu.py
+# C extensions
+*.so
+chico_delivery/chico_delivery.db
+chico_delivery/__pycache__/app.cpython-38.pyc
+chico_delivery/ext/auth/__pycache__/commands.cpython-38.pyc
+chico_delivery/chico_delivery.db
+chico_delivery/__pycache__/app.cpython-38.pyc
