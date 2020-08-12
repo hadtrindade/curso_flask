@@ -11,3 +11,6 @@ pytest-flask
 pytest-cov
 flask-migrate
 flask-admin
+flask-wtf
+dynaconf
+email_validator

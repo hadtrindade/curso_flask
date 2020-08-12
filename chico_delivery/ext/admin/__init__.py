@@ -8,7 +8,7 @@ admin = Admin()
 
 
 def init_app(app):
-    admin.name = "Chico_Delivery"
-    admin.template_mode = "bootstrap3"
+    admin.name = app.config.get("ADMIN_NAME", "Chico_Delivery")
+    admin.template_mode = app.config.get("ADMIN_TEMPLATE_MODE", "bootstrap3")
     admin.init_app(app)
     admin.add_view(ModelView(Category, db.session))

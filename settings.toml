@@ -1,0 +1,38 @@
+[default]
+DEBUG = false
+FLASK_ADMIN_SWATCH = "cerulean"
+EXTENSIONS = [
+    "chico_delivery.ext.db:init_app",
+    "chico_delivery.ext.auth:init_app",
+    "chico_delivery.ext.admin:init_app",
+    "chico_delivery.ext.migrate:init_app",
+    "chico_delivery.ext.cli:init_app",
+    "chico_delivery.ext.site:init_app",
+    "chico_delivery.ext.hooks:init_app",
+]
+UPLOAD_FOLDER = "uploads"
+
+[development]
+DEBUG = true
+SECRET_KEY = '\x17\x10=l.\xecI\x91\xeb\xb8\xa2\xef\x0f\xc6\xd7\x9f'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///chico_delivery.db'
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
+DEBUG_TB_PROFILER_ENABLED = true
+DEBUG_TB_INTERCEPT_REDIRECTS = false
+
+EXTENSIONS = [
+    "chico_delivery.ext.db:init_app",
+    "chico_delivery.ext.auth:init_app",
+    "chico_delivery.ext.admin:init_app",
+    "chico_delivery.ext.migrate:init_app",
+    "chico_delivery.ext.cli:init_app",
+    "chico_delivery.ext.toolbar:init_app",
+    "chico_delivery.ext.site:init_app",
+    "chico_delivery.ext.hooks:init_app",
+]
+
+[prodoction]
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+SQLALCHEMY_DATABASE_URI = 'mysql://...'
+

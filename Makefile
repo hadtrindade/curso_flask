@@ -22,4 +22,5 @@ test:
 	FLASK_ENV=test pytest tests/ -v --cov=chico_delivery
 
 
-
+run:
+	FLASK_APP=chico_delivery/app.py FLASK_ENV=development flask run
